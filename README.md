@@ -212,6 +212,19 @@ pytest
 
 ---
 
+## Author
+
+**Agata Gabara**
+
+Computer Science student interested in Bioinformatics, Python, Data Analysis, Machine Learning and Computational Biology.
+
+- GitHub: https://github.com/ag48665
+- LinkedIn: *(add your LinkedIn profile URL here)*
+
+---
+
 ## License
+
+This project is intended for educational and learning purposes.
 
 This project is intended for educational and learning purposes.
