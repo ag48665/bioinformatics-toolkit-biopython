@@ -33,6 +33,32 @@ python main.py
 The menu lets you choose between sequence analysis, FASTA parsing, protein analysis, GC plotting, alignment, and motif creation.
 
 ## Examples
+## Screenshots
+
+### DNA Sequence Analysis
+
+![DNA Sequence Analysis](images/dna-sequence-analysis.png)
+
+Example of DNA sequence parsing and analysis using Biopython Seq and SeqIO modules.
+
+### Sequence Alignment and Motif Analysis
+
+![Sequence Alignment and Motif Analysis](images/sequence_alignment_and_motif_analysis.png)
+
+Pairwise sequence alignment and motif consensus generation with Biopython.
+
+### NCBI Entrez Search
+
+![NCBI Entrez Search](images/pubmed_search_demo.png)
+
+Searching the PubMed database programmatically through the Entrez API.
+
+### Protein Structure Analysis
+
+![Protein Structure Analysis](images/protein_structure_analysis.png)
+
+Parsing a real Protein Data Bank (PDB) structure and extracting chains, residues and atom statistics.
+
 
 ### DNA analysis
 
