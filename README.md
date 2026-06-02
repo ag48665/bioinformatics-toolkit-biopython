@@ -1,84 +1,143 @@
 # Bioinformatics Toolkit with Biopython
 
-An educational Python repository that demonstrates the most important Biopython concepts: DNA/RNA/protein sequences, FASTA and GenBank parsing, GC content, transcription, translation, pairwise alignment, motifs, Entrez, and PDB structure parsing.
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Biopython](https://img.shields.io/badge/Biopython-Latest-green)
 
-## Project contents
+An educational Python project demonstrating the most important Biopython concepts, including DNA/RNA/protein sequence analysis, FASTA and GenBank parsing, GC content calculation, transcription, translation, sequence alignment, motif analysis, Entrez database access, and PDB structure parsing.
 
-- `src/sequence_analyzer.py` — DNA analysis: length, GC percentage, complement, reverse complement, transcription, and translation.
-- `src/fasta_parser.py` — FASTA/GenBank reading and writing with `Bio.SeqIO` and `SeqRecord`.
-- `src/protein_analyzer.py` — protein sequence analysis and amino acid counting.
-- `src/gc_plot.py` — GC content plotting for records from a FASTA file.
-- `src/alignment_tools.py` — simple pairwise sequence alignment.
-- `src/entrez_tools.py` — basic NCBI Entrez search/fetch helpers.
-- `src/motif_tools.py` — DNA motif creation and consensus sequence extraction.
-- `src/pdb_tools.py` — basic PDB structure parsing.
-- `notebooks/` — English learning notebooks with step-by-step examples.
-- `docs/` — Biopython tutorial PDF.
-- `data/` — small example FASTA files.
+---
+
+## Features
+
+- DNA sequence analysis
+- FASTA and GenBank parsing
+- Protein sequence analysis
+- GC content calculation and visualization
+- Pairwise sequence alignment
+- Motif detection and consensus sequences
+- NCBI Entrez database access
+- Protein structure parsing using PDB files
+- Interactive Jupyter Notebook examples
+- Unit tests with pytest
+
+---
+
+## Project Structure
+
+```text
+bioinformatics-toolkit-biopython/
+│
+├── data/
+├── docs/
+├── examples/
+├── images/
+├── notebooks/
+├── src/
+├── tests/
+├── README.md
+├── requirements.txt
+└── main.py
+```
+
+---
+
+## Modules
+
+| Module | Description |
+|----------|-------------|
+| `sequence_analyzer.py` | DNA sequence analysis |
+| `fasta_parser.py` | FASTA and GenBank parsing |
+| `protein_analyzer.py` | Protein sequence analysis |
+| `gc_plot.py` | GC content visualization |
+| `alignment_tools.py` | Pairwise sequence alignment |
+| `motif_tools.py` | Motif analysis |
+| `entrez_tools.py` | NCBI Entrez search and retrieval |
+| `pdb_tools.py` | Protein structure parsing |
+
+---
 
 ## Installation
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
+# Linux / macOS
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
+
 pip install -r requirements.txt
 ```
 
-## Run the menu application
+---
+
+## Running the Application
 
 ```bash
 python main.py
 ```
 
-The menu lets you choose between sequence analysis, FASTA parsing, protein analysis, GC plotting, alignment, and motif creation.
+The menu-driven application allows users to perform sequence analysis, FASTA parsing, protein analysis, GC content plotting, sequence alignment, motif analysis, Entrez queries, and PDB structure parsing.
 
-## Examples
+---
+
 ## Screenshots
 
 ### DNA Sequence Analysis
 
 ![DNA Sequence Analysis](images/dna-sequence-analysis.png)
 
-Example of DNA sequence parsing and analysis using Biopython Seq and SeqIO modules.
+Analysis of DNA sequences using Biopython Seq and SeqIO modules.
 
 ### Sequence Alignment and Motif Analysis
 
 ![Sequence Alignment and Motif Analysis](images/sequence_alignment_and_motif_analysis.png)
 
-Pairwise sequence alignment and motif consensus generation with Biopython.
+Pairwise sequence alignment and motif consensus generation.
 
 ### NCBI Entrez Search
 
 ![NCBI Entrez Search](images/pubmed_search_demo.png)
 
-Searching the PubMed database programmatically through the Entrez API.
+Searching the PubMed database programmatically through Biopython's Entrez module.
 
 ### Protein Structure Analysis
 
 ![Protein Structure Analysis](images/protein_structure_analysis.png)
 
-Parsing a real Protein Data Bank (PDB) structure and extracting chains, residues and atom statistics.
+Parsing a real Protein Data Bank (PDB) structure and extracting structural statistics from human hemoglobin (PDB ID: 1A3N).
 
+---
 
-### DNA analysis
+## Example Usage
+
+### DNA Analysis
 
 ```python
 from src.sequence_analyzer import analyze_dna
 
-result = analyze_dna("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
+result = analyze_dna(
+    "ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG"
+)
+
 print(result)
 ```
 
-### FASTA parser
+### FASTA Parsing
 
 ```python
-from src.fasta_parser import parse_sequences, summarize_records
+from src.fasta_parser import parse_sequences
 
-records = parse_sequences("data/example.fasta", "fasta")
-print(summarize_records(records))
+records = parse_sequences(
+    "data/example.fasta",
+    "fasta"
+)
+
+print(records)
 ```
 
-### Protein analysis
+### Protein Analysis
 
 ```python
 from src.protein_analyzer import analyze_protein
@@ -86,48 +145,73 @@ from src.protein_analyzer import analyze_protein
 print(analyze_protein("MAIVMGRWKGAR"))
 ```
 
-### GC content plot
+### GC Content Plot
 
 ```python
 from src.gc_plot import plot_gc_content
 
-plot_gc_content("data/example.fasta", "outputs/gc_content.png")
+plot_gc_content(
+    "data/example.fasta",
+    "outputs/gc_content.png"
+)
 ```
 
-## Theory to remember
+---
 
-### `Seq`
+## Biopython Concepts
 
-`Seq` is the core Biopython object for DNA, RNA, or protein sequences. It behaves similarly to a Python string: you can check its length, slice it, count symbols, and search inside it.
+### Seq
 
-### `SeqRecord`
+The `Seq` object represents DNA, RNA, or protein sequences and provides methods for common biological operations.
 
-`SeqRecord` stores a sequence together with metadata such as `id`, `name`, `description`, `annotations`, and `seq`.
+### SeqRecord
 
-### `SeqIO`
+`SeqRecord` stores biological sequences together with metadata such as identifiers, descriptions, annotations, and sequence information.
 
-`SeqIO` is used to read and write biological sequence files, including FASTA and GenBank.
+### SeqIO
+
+`SeqIO` enables reading and writing biological sequence formats including FASTA and GenBank.
 
 ### FASTA vs GenBank
 
-FASTA is a simple format containing an identifier and a sequence. GenBank is richer because it can also store biological annotations.
+- **FASTA** contains sequence identifiers and sequence data.
+- **GenBank** contains sequence data together with biological annotations and metadata.
 
-### Important biological operations
+### Common Operations
 
-- complement
-- reverse complement
-- GC content
-- transcription: DNA → RNA
-- translation: RNA/DNA → protein
-- sequence alignment
-- motifs and consensus sequences
-- PDB structure parsing
-- NCBI Entrez search and fetch
+- Complement
+- Reverse Complement
+- GC Content
+- DNA → RNA Transcription
+- RNA/DNA → Protein Translation
+- Sequence Alignment
+- Motif Discovery
+- Protein Structure Parsing
+- NCBI Database Searching
 
-## Suggested future improvements
+---
 
-- Add more `pytest` tests.
-- Add a full command-line interface with `argparse`.
-- Add example GenBank and PDB files.
-- Add GitHub Actions for automated tests.
-- Add screenshots of generated plots to the README.
+## Testing
+
+Run all tests using:
+
+```bash
+pytest
+```
+
+---
+
+## Future Improvements
+
+- Increase unit test coverage
+- Add multiple sequence alignment (MSA)
+- Add advanced motif analysis
+- Add interactive protein structure visualization
+- Add GitHub Actions CI/CD workflow
+- Add support for additional biological file formats
+
+---
+
+## License
+
+This project is intended for educational and learning purposes.
