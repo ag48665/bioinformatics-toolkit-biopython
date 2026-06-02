@@ -226,5 +226,3 @@ Computer Science student interested in Bioinformatics, Python, Data Analysis, Ma
 ## License
 
 This project is intended for educational and learning purposes.
-
-This project is intended for educational and learning purposes.
