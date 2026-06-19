@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Biopython](https://img.shields.io/badge/Biopython-Latest-green)
 
-An educational Python project demonstrating the most important Biopython concepts, including DNA/RNA/protein sequence analysis, FASTA and GenBank parsing, GC content calculation, transcription, translation, sequence alignment, motif analysis, Entrez database access, and PDB structure parsing.
+A Python-based bioinformatics toolkit demonstrating practical applications of Biopython for sequence analysis, biological file parsing, motif discovery, protein structure analysis, and access to public biological databases.
 
 ---
 
