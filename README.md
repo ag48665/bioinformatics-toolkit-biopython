@@ -6,6 +6,27 @@
 A Python-based bioinformatics toolkit demonstrating practical applications of Biopython for sequence analysis, biological file parsing, motif discovery, protein structure analysis, and access to public biological databases.
 
 ---
+## Project Highlights
+
+✔ DNA, RNA, and protein sequence analysis
+
+✔ FASTA and GenBank parsing
+
+✔ GC content calculation and visualization
+
+✔ Pairwise sequence alignment
+
+✔ Motif discovery and consensus sequence generation
+
+✔ NCBI Entrez database integration
+
+✔ Protein structure analysis using PDB files
+
+✔ Unit testing with pytest
+
+✔ Reproducible bioinformatics workflows
+
+---
 
 ## Features
 
@@ -38,6 +59,35 @@ bioinformatics-toolkit-biopython/
 ├── requirements.txt
 └── main.py
 ```
+
+---
+## Skills Demonstrated
+
+### Bioinformatics
+
+- Sequence analysis
+- Biological file parsing
+- Protein sequence analysis
+- Motif discovery
+- Sequence alignment
+- Protein structure analysis
+- Biological database access
+
+### Python Development
+
+- Object-oriented programming
+- Modular software design
+- Unit testing
+- Data visualization
+- Command-line applications
+
+### Libraries & Tools
+
+- Biopython
+- pytest
+- Jupyter Notebook
+- NCBI Entrez
+- Protein Data Bank (PDB)
 
 ---
 
@@ -216,10 +266,19 @@ pytest
 
 **Agata Gabara**
 
-Computer Science student interested in Bioinformatics, Python, Data Analysis, Machine Learning and Computational Biology.
+Incoming MSc Bioinformatics Student
 
-- GitHub: https://github.com/ag48665
-- LinkedIn: *(add your LinkedIn profile URL here)*
+Research Interests:
+
+- Cancer Genomics
+- Transcriptomics
+- Computational Biology
+- Bioinformatics Software Development
+- Machine Learning for Genomics
+
+GitHub: https://github.com/ag48665
+
+LinkedIn: https://www.linkedin.com/in/agatha-gabara-06494a37/
 
 ---
 
